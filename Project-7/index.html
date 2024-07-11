@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Popup in HTML CSS Javascript | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="show-popup">Show Popup</button>
+    <div class="popup-container">
+        <div class="popup-box">
+            <h1>Hello World!</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eius itaque molestiae sit quidem ullam, quis ut molestias quas dolores cum ratione, sint quibusdam iusto.</p>
+            <button class="close-btn">OK</button>
+        </div>
+    </div>
+
+    <div id="container"></div>
+
+    <script src="/index.js"></script>
+    <script>
+        // Create a document fragment
+        let fragment = document.createDocumentFragment();
+        
+        // Create and append new elements to the fragment
+        for (let i = 1; i <= 5; i++) {
+            let newElement = document.createElement('p');
+            newElement.textContent = 'This is paragraph ' + i;
+            fragment.appendChild(newElement);
+        }
+        
+        // Append the fragment to the main document
+        document.getElementById('container').appendChild(fragment);
+    </script>
+</body>
+</html>
+
